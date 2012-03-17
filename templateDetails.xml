@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.5/template-install.dtd">
+<install version="1.5" type="template">
+  <name>Verteb Theme</name>
+  <creationDate>17/03/12</creationDate>
+  <author>Dominic Simard</author>
+  <authorEmail>dominic@verteb.ca</authorEmail>
+  <authorUrl>http://verteb.ca</authorUrl>
+  <copyright></copyright>
+  <license>GNU/GPL</license>
+  <version>1.0.0</version>
+  <description>TPL_verteb</description>
+  <files>
+    <filename>index.php</filename>
+    <filename>templateDetails.xml</filename>
+    <filename>template_thumbnail.png</filename>
+    <filename>params.ini</filename>
+    <filename>css/index.html</filename>
+    <filename>css/style.css</filename>
+  </files>
+  <positions>
+    <position>main-nav</position>
+    <position>footer-nav</position>
+    <position>top-banner</position>
+    <position>sidebar</position>    
+  </positions>
+  <params>
+  </params>
+</install>
