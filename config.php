@@ -1,7 +1,7 @@
 <?php
 //Infos générales du site
-define('COMPANY_NAME', '');
-define('COMPANY_MOTO', '');
+define('COMPANY_NAME', 'Verteb Solution Web Inc.');
+define('COMPANY_MOTO', 'Conception de sites Web');
 define('COMPANY_ADDRESS', '');
 define('COMPANY_CITY', 'Québec');
 define('COMPANY_PROVINCE', 'QC');
