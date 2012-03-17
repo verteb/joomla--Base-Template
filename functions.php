@@ -114,11 +114,11 @@ function is_ie7() {
   return strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 7.') !== FALSE;
 }
 /**
- * Détecte si le browser client est IE6
+ * Attention : Hardcoded. Retourne vrai si on est sur le serveur de dev de verteb
  * @return bool 
  */
 function isDevAccount(){
   $array = split('/', $_SERVER['DOCUMENT_ROOT']);  
-  return $array[2] == 'sts01'; //Change for your own dev server name if you fork
+  return $array[2] == 'sts01'; //Change for your own dev server name if you fork this file. Pattern for us is subdomain.sts01.com so feel free to completely edit/remove this function
 }
 ?>
