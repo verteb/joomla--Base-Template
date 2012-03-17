@@ -24,7 +24,7 @@ $isHome = isHome($alias);
 	<?php if (isDevAccount()) : ?><meta name="robots" content="noindex, nofollow"><?php endif; ?>	
     <!-- Title and meta tags -->
     <title><?= $isHome ? COMPANY_NAME . ' - ' . COMPANY_MOTO : $this->title . ' - '.COMPANY_NAME ?></title>
-	<meta name="description" content="<?= $this->description ?>">
+	<meta name="description" content="<?= isDefaultJoomlaDesc($this->description) ? '' : $this->description ?>">
 	<meta name="author" content="<?= COMPANY_NAME ?>">
 	<?= COMPANY_GEOTAGS ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
