@@ -1,7 +1,6 @@
 
 <?php
 defined('_JEXEC') or die;
-print_r($_SERVER);
 $templateDir = '/templates/' . $this->template;
 $templatePhysDir = $_SERVER['DOCUMENT_ROOT'] . '/templates/' . $this->template;
 require_once  $templatePhysDir . '/config.php';
