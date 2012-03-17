@@ -1,9 +1,11 @@
 
 <?php
 defined('_JEXEC') or die;
-$templateDir = $_SERVER['DOCUMENT_ROOT'] . '/templates/' . $this->template;
-require_once $templateDir . '/config.php';
-require_once $templateDir . '/functions.php';
+print_r($_SERVER);
+$templateDir = '/templates/' . $this->template;
+$templatePhysDir = $_SERVER['DOCUMENT_ROOT'] . '/templates/' . $this->template;
+require_once  $templatePhysDir . '/config.php';
+require_once $templatePhysDir  . '/functions.php';
 $db = & JFactory::getDBO();
 $aliases = getAliases($db);
 $catName = getCatAlias($aliases);
@@ -19,11 +21,9 @@ $isHome = isHome($alias);
 <!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<?php if (isDevAccount()) : ?>
-    <meta name="robots" content="noindex, nofollow">
-    <?php endif; ?>	
+	<?php if (isDevAccount()) : ?><meta name="robots" content="noindex, nofollow"><?php endif; ?>	
     <!-- Title and meta tags -->
-    <title><?= $isHome ? COMPANY_NAME : $this->title . ' - '.COMPANY_NAME ?></title>
+    <title><?= $isHome ? COMPANY_NAME . ' - ' . COMPANY_MOTO : $this->title . ' - '.COMPANY_NAME ?></title>
 	<meta name="description" content="<?= $this->description ?>">
 	<meta name="author" content="<?= COMPANY_NAME ?>">
 	<?= COMPANY_GEOTAGS ?>
