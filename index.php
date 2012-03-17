@@ -8,7 +8,9 @@ $db = & JFactory::getDBO();
 $aliases = getAliases($db);
 $catName = getCatAlias($aliases);
 $sectionName = getSectionAlias($aliases);
-$alias = getAlias(&JFactory::getURI()->getPath());
+$alias = &JFactory::getURI()->getPath();
+$alias = getAlias($alias);
+$isHome = isHome($alias);
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 oldie" lang="fr"> <![endif]-->
@@ -21,7 +23,7 @@ $alias = getAlias(&JFactory::getURI()->getPath());
     <meta name="robots" content="noindex, nofollow">
     <?php endif; ?>	
     <!-- Title and meta tags -->
-    <title><?= isHome() ? COMPANY_NAME : $this->title . ' - '.COMPANY_NAME ?></title>
+    <title><?= $isHome ? COMPANY_NAME : $this->title . ' - '.COMPANY_NAME ?></title>
 	<meta name="description" content="<?= $this->description ?>">
 	<meta name="author" content="<?= COMPANY_NAME ?>">
 	<?= COMPANY_GEOTAGS ?>
