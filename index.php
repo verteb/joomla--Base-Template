@@ -32,7 +32,7 @@ $isHome = isHome($alias);
 	<!-- JS -->
 	<script src="<?= $templateDir ?>/js/libs/modernizr.min.js"></script>
 	<script scr="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="<?= $templateDir ?>/js/libs/jquery.min.js"><\/script>')</script>
 	<script src="<?= $templateDir ?>/js/libs/selectivizr-min.js"></script>
 </head>
 <body id="body" class="<?= $alias . ' cat-' . $catName . ' sec-' . $sectionName ?>">
@@ -46,7 +46,7 @@ $isHome = isHome($alias);
 
 	</footer>
 	<!-- scripts concatenated and minified via ant build script-->
-	<script src="js/script.js"></script>
+	<script src="<?= $templateDir ?>/js/script.js"></script>
 	<!-- end scripts-->
 
 	<script>
