@@ -84,6 +84,14 @@ function getCachedXml($externalUrl, $localPath, $cache_time = 900) {
   return simplexml_load_string($string);  
 }
 /**
+ * Retourne vrai si la description reçu est la description par défaut de joomla.
+ * @param string $desc 
+ * @return bool
+ */
+function isDefaultJoomlaDesc($desc){
+  return $desc == 'Joomla! - the dynamic portal engine and content management system';
+}
+/**
  * Affiche les erreurs en mode déboguage
  * @param array $errors 
  */
@@ -107,7 +115,7 @@ function is_ie6() {
   return strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6.') !== FALSE;
 }
 /**
- * Détecte si le browser client est IE6
+ * Détecte si le browser client est IE7
  * @return bool 
  */
 function is_ie7() {
@@ -118,7 +126,7 @@ function is_ie7() {
  * @return bool 
  */
 function isDevAccount(){
-  $array = split('/', $_SERVER['DOCUMENT_ROOT']);  
+  $array = split('/', $_SERVER['DOCUMENT_ROOT']);
   return $array[2] == 'sts01'; //Change for your own dev server name if you fork this file. Pattern for us is subdomain.sts01.com so feel free to completely edit/remove this function
 }
 ?>
