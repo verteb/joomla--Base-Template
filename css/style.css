@@ -73,9 +73,72 @@ td { vertical-align: top; }
 /* ===== Primary Styles ========================================================
    Author: Verteb Solution Web Inc.
    ========================================================================== */
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+   text-align: center;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
 
 
-
+.wrapper{
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+.page-header{
+  position: relative;
+  min-height: 100px;
+  background: url(http://placehold.it/960x100/333333/ffffff/&text=HEADER) no-repeat;
+}
+.logo{
+  background-image: url(http://placehold.it/100x100/8C8C8C/ffffff/&text=LOGO);
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page-header h1{margin: 0;padding: 0;width: 0;}
+.content, .sidebar{float: left;padding: 20px;}
+.main{background: #A6A6A6;}
+.content{width: 720px;min-height: 360px;background: #CCCCCC;}
+.sidebar{width: 160px;min-height: 900px;background: #A6A6A6 url(http://placehold.it/200x400/A6A6A6/ffffff/&text=SIDEBAR) no-repeat;}
+.page-footer{
+  position: relative;
+  min-height: 100px;
+  background: url(http://placehold.it/960x100/666666/ffffff/&text=FOOTER) no-repeat;
+}
+.copyright{text-align:center;font-size: 11px;padding: 5px 0;}
 
 
 
@@ -96,7 +159,11 @@ td { vertical-align: top; }
    Non-Semantic Helper Classes
    ========================================================================== */
 
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir{
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
 .ir br { display: none; }
 .hidden { display: none !important; visibility: hidden; }
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
